@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeenVestor Hub - Mi Plan de Inversión</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        schwab: {
+                            dark: '#0a192f',
+                            card: '#112240',
+                            accent: '#64ffda',
+                            green: '#00a37e',
+                            gold: '#f5a623',
+                            lightText: '#8892b0',
+                            whiteText: '#e6f1ff'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0a192f;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #112240;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #00a37e;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="text-schwab-whiteText min-h-screen selection:bg-schwab-green selection:text-white antialiased custom-scrollbar">
+
+    <!-- Navbar -->
+    <nav class="border-b border-gray-800 bg-schwab-dark/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-gradient-to-tr from-schwab-green to-schwab-accent p-2 rounded-xl">
+                    <svg class="w-6 h-6 text-schwab-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg>
+                </div>
+                <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-schwab-accent to-schwab-green bg-clip-text text-transparent">
+                    TeenVestor <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-schwab-green/20 text-schwab-accent ml-1">Plan Oficial</span>
+                </span>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-schwab-lightText">
+                <a href="#mi-estrategia" class="hover:text-schwab-accent transition-colors">Estrategia</a>
+                <a href="#simulador" class="hover:text-schwab-accent transition-colors">Simulador</a>
+                <a href="#entrenamiento" class="hover:text-schwab-accent transition-colors">Entrenamiento</a>
+                <a href="#pitch-padres" class="hover:text-schwab-accent transition-colors">Propuesta Padres</a>
+            </div>
+            <div>
+                <a href="#pitch-padres" class="bg-gradient-to-r from-schwab-green to-schwab-accent hover:from-schwab-accent hover:to-schwab-green text-schwab-dark font-bold px-4 py-2 rounded-xl text-sm transition-all shadow-lg shadow-schwab-green/10">
+                    Presentar a Padres
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden py-16 md:py-24 border-b border-gray-800">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,163,126,0.1),transparent_45%)]"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+            <span class="px-3 py-1 text-xs font-semibold text-schwab-accent bg-schwab-accent/10 rounded-full border border-schwab-accent/20 uppercase tracking-widest">
+                Aprender e Invertir • 16 Años
+            </span>
+            <h1 class="mt-6 text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-none">
+                Mi Plan de Inversión en <br class="hidden sm:inline">
+                <span class="bg-gradient-to-r from-schwab-accent to-schwab-green bg-clip-text text-transparent">Charles Schwab</span>
+            </h1>
+            <p class="mt-6 text-lg sm:text-xl text-schwab-lightText max-w-2xl mx-auto">
+                "El éxito en la bolsa no se trata de adivinar el futuro, sino de mantener la calma y seguir un plan estructurado."
+            </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <div class="flex items-center space-x-2 bg-schwab-card px-4 py-2 rounded-xl border border-gray-800">
+                    <span class="w-2.5 h-2.5 rounded-full bg-schwab-green animate-ping"></span>
+                    <span class="text-sm font-semibold text-white">Objetivo: Aprendizaje Práctico</span>
+                </div>
+                <div class="flex items-center space-x-2 bg-schwab-card px-4 py-2 rounded-xl border border-gray-800">
+                    <span class="text-sm font-semibold text-schwab-accent">Presupuesto: $100 - $200 USD</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- CONCEPTOS CLAVE -->
+        <section id="mi-estrategia" class="space-y-8 scroll-mt-20">
+            <div class="text-center md:text-left">
+                <h2 class="text-3xl font-extrabold text-white">Los Pilares de Mi Estrategia</h2>
+                <p class="text-schwab-lightText mt-2">La base conceptual que me guiará para no actuar por impulso emocional.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tarjeta 1 -->
+                <div class="bg-schwab-card p-6 rounded-2xl border border-gray-800 hover:border-schwab-green/50 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-schwab-green/10 flex items-center justify-center text-schwab-green mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Pérdida en Papel</h3>
+                        <p class="text-sm text-schwab-lightText leading-relaxed">
+                            Si las acciones bajan de valor, <strong>no he perdido dinero real</strong> hasta que decida venderlas. La fluctuación del mercado es normal y temporal para empresas fuertes.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-800 text-xs text-schwab-accent font-semibold uppercase tracking-wider">
+                        Mentalidad de largo plazo
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="bg-schwab-card p-6 rounded-2xl border border-gray-800 hover:border-schwab-green/50 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-schwab-green/10 flex items-center justify-center text-schwab-green mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H17m0 0V4m0 4h4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Interés Compuesto (DRIP)</h3>
+                        <p class="text-sm text-schwab-lightText leading-relaxed">
+                            Configuraré la <strong>Reinversión Automática de Dividendos</strong>. Las ganancias que generen mis acciones se usarán automáticamente para comprar más fracciones gratis.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-800 text-xs text-schwab-accent font-semibold uppercase tracking-wider">
+                        Efecto bola de nieve
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="bg-schwab-card p-6 rounded-2xl border border-gray-800 hover:border-schwab-green/50 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-schwab-green/10 flex items-center justify-center text-schwab-green mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">La Diversificación</h3>
+                        <p class="text-sm text-schwab-lightText leading-relaxed">
+                            Mi escudo protector principal. El 50% de mis fondos estará en el S&P 500 (SWPPX). Si una empresa sufre un desastre, las otras 499 sostendrán mi portafolio.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-800 text-xs text-schwab-accent font-semibold uppercase tracking-wider">
+                        Protección del capital
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTAFOLIO INTERACTIVO (SIMULADOR) -->
+        <section id="simulador" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start scroll-mt-20">
+            <div class="lg:col-span-5 space-y-6">
+                <div class="space-y-2">
+                    <span class="text-schwab-green font-bold text-sm tracking-wide uppercase">Paso Práctico #1</span>
+                    <h2 class="text-3xl font-extrabold text-white">Calculadora de Portafolio</h2>
+                    <p class="text-schwab-lightText text-sm leading-relaxed">
+                        Modifica tu presupuesto inicial para ver cómo se distribuirán tus dólares automáticamente usando la estrategia balanceada y la herramienta de Schwab Stock Slices.
+                    </p>
+                </div>
+
+                <div class="bg-schwab-card p-6 rounded-2xl border border-gray-800 space-y-6">
+                    <div>
+                        <label for="budgetInput" class="block text-sm font-medium text-white mb-2">Presupuesto Inicial (USD)</label>
+                        <div class="relative rounded-xl shadow-sm">
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <span class="text-schwab-accent font-bold">$</span>
+                            </div>
+                            <input type="number" id="budgetInput" value="150" min="50" max="1000" step="10"
+                                class="block w-full pl-8 pr-12 py-3 bg-schwab-dark text-white border border-gray-700 rounded-xl focus:ring-2 focus:ring-schwab-green focus:border-schwab-green focus:outline-none font-bold text-xl transition-all">
+                            <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+                                <span class="text-schwab-lightText text-sm">USD</span>
+                            </div>
+                        </div>
+                        <input type="range" id="budgetRange" min="50" max="500" value="150" step="10"
+                            class="w-full mt-4 accent-schwab-green bg-schwab-dark rounded-lg appearance-none h-2 cursor-pointer">
+                    </div>
+
+                    <div class="p-4 bg-schwab-dark rounded-xl space-y-3 border border-gray-800">
+                        <div class="flex justify-between items-center text-xs text-schwab-lightText">
+                            <span>Mínimo Recomendado</span>
+                            <span>Máximo Test</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm font-semibold">
+                            <span>$50 USD</span>
+                            <span>$500 USD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard de Distribución -->
+            <div class="lg:col-span-7 bg-schwab-card p-6 md:p-8 rounded-2xl border border-gray-800 space-y-8">
+                <h3 class="text-xl font-bold text-white flex items-center justify-between">
+                    <span>Distribución Recomendada</span>
+                    <span class="text-xs bg-schwab-green/10 text-schwab-accent border border-schwab-green/20 px-3 py-1 rounded-full">Diversificado</span>
+                </h3>
+
+                <!-- Barra Gráfica -->
+                <div class="space-y-2">
+                    <div class="h-5 w-full bg-schwab-dark rounded-full overflow-hidden flex">
+                        <div id="barAncla" class="bg-gradient-to-r from-emerald-600 to-emerald-400 h-full transition-all duration-500" style="width: 50%;"></div>
+                        <div id="barTecnologia" class="bg-gradient-to-r from-blue-600 to-cyan-400 h-full transition-all duration-500" style="width: 33%;"></div>
+                        <div id="barConsumo" class="bg-gradient-to-r from-yellow-500 to-amber-300 h-full transition-all duration-500" style="width: 17%;"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-schwab-lightText font-semibold">
+                        <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500 mr-1.5"></span>El Ancla (50%)</span>
+                        <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-cyan-500 mr-1.5"></span>Tecnología (33%)</span>
+                        <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-amber-500 mr-1.5"></span>Consumo (17%)</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Caja 1 -->
+                    <div class="p-5 bg-schwab-dark rounded-xl border border-gray-800 space-y-3 relative overflow-hidden">
+                        <div class="absolute right-0 top-0 w-16 h-16 bg-emerald-500/5 rounded-full -mr-4 -mt-4"></div>
+                        <h4 class="text-xs font-semibold uppercase text-emerald-400 tracking-wider">El Ancla (50%)</h4>
+                        <div id="valAncla" class="text-2xl font-black text-white">$75.00</div>
+                        <p class="text-xs text-schwab-lightText leading-relaxed">
+                            <span class="font-bold text-white text-[11px] block">Schwab S&P 500 (SWPPX)</span>
+                            Diversificación instantánea en las 500 empresas más grandes de EE.UU.
+                        </p>
+                    </div>
+
+                    <!-- Caja 2 -->
+                    <div class="p-5 bg-schwab-dark rounded-xl border border-gray-800 space-y-3 relative overflow-hidden">
+                        <div class="absolute right-0 top-0 w-16 h-16 bg-cyan-500/5 rounded-full -mr-4 -mt-4"></div>
+                        <h4 class="text-xs font-semibold uppercase text-cyan-400 tracking-wider">Tecnología (33%)</h4>
+                        <div id="valTecnologia" class="text-2xl font-black text-white">$49.50</div>
+                        <p class="text-xs text-schwab-lightText leading-relaxed">
+                            <span class="font-bold text-white text-[11px] block">Apple (AAPL) & Microsoft (MSFT)</span>
+                            Empresas tecnológicas premium líderes del mercado que usas a diario.
+                        </p>
+                    </div>
+
+                    <!-- Caja 3 -->
+                    <div class="p-5 bg-schwab-dark rounded-xl border border-gray-800 space-y-3 relative overflow-hidden">
+                        <div class="absolute right-0 top-0 w-16 h-16 bg-amber-500/5 rounded-full -mr-4 -mt-4"></div>
+                        <h4 class="text-xs font-semibold uppercase text-amber-400 tracking-wider">Consumo (17%)</h4>
+                        <div id="valConsumo" class="text-2xl font-black text-white">$25.50</div>
+                        <p class="text-xs text-schwab-lightText leading-relaxed">
+                            <span class="font-bold text-white text-[11px] block">Amazon, Coca-Cola o Disney</span>
+                            Marcas estables globales que pagan dividendos periódicamente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESCENARIOS DE ENTRENAMIENTO -->
+        <section id="entrenamiento" class="space-y-8 scroll-mt-20">
+            <div class="text-center max-w-3xl mx-auto space-y-3">
+                <span class="text-schwab-green font-bold text-sm tracking-wide uppercase">Paso Práctico #2</span>
+                <h2 class="text-4xl font-extrabold text-white">Academia de Decisión Táctica</h2>
+                <p class="text-schwab-lightText">
+                    Simula situaciones de mercado reales y pon a prueba tu psicología inversora. Elige un escenario para comenzar a entrenar tu mente.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Escenario 1: Apple -->
+                <div class="bg-schwab-card p-6 md:p-8 rounded-3xl border border-gray-800 relative flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 text-xs bg-cyan-500/10 text-cyan-400 rounded-full font-bold border border-cyan-500/20">Escenario 1</span>
+                            <span class="text-xs text-schwab-lightText">Volatilidad: Baja-Media</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white flex items-center space-x-2">
+                            <span>Apple: "El Lanzamiento Fallido"</span>
+                        </h3>
+                        <p class="text-sm text-schwab-lightText leading-relaxed">
+                            Inviertes <strong>$25 USD</strong> en Apple. En septiembre presentan un nuevo iPhone, pero las redes sociales estallan criticando la "falta de innovación". El pánico se extiende y tus acciones bajan a <strong>$21 USD</strong> (caída de casi el 16%). ¿Qué decides hacer?
+                        </p>
+                    </div>
+
+                    <!-- Botones de Acción -->
+                    <div class="space-y-3">
+                        <button onclick="selectOption('apple', 'A')" class="w-full text-left p-3.5 rounded-xl bg-schwab-dark hover:bg-gray-800 border border-gray-800 hover:border-red-500 transition-all text-xs font-semibold flex justify-between items-center">
+                            <span>A) Vender inmediatamente para no perder más</span>
+                            <span class="w-5 h-5 rounded-full border border-gray-600 flex items-center justify-center text-[10px]">A</span>
+                        </button>
+                        <button onclick="selectOption('apple', 'B')" class="w-full text-left p-3.5 rounded-xl bg-schwab-dark hover:bg-gray-800 border border-gray-800 hover:border-yellow-500 transition-all text-xs font-semibold flex justify-between items-center">
+                            <span>B) Esperar 1 semana y si baja más, vender</span>
+                            <span class="w-5 h-5 rounded-full border border-gray-600 flex items-center justify-center text-[10px]">B</span>
+                        </button>
+                        <button onclick="selectOption('apple', 'C')" class="w-full text-left p-3.5 rounded-xl bg-schwab-dark hover:bg-gray-800 border border-gray-800 hover:border-schwab-green transition-all text-xs font-semibold flex justify-between items-center">
+                            <span>C) Comprar $15 USD más de Apple a $21 USD (Con descuento)</span>
+                            <span class="w-5 h-5 rounded-full border border-gray-600 flex items-center justify-center text-[10px]">C</span>
+                        </button>
+                    </div>
+
+                    <!-- Panel de Feedback -->
+                    <div id="feedback-apple" class="hidden p-5 rounded-xl text-xs leading-relaxed transition-all duration-300">
+                        <!-- Se llena vía JS -->
+                    </div>
+                </div>
+
+                <!-- Escenario 2: Tesla -->
+                <div class="bg-schwab-card p-6 md:p-8 rounded-3xl border border-gray-800 relative flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 text-xs bg-amber-500/10 text-amber-400 rounded-full font-bold border border-amber-500/20">Escenario 2</span>
+                            <span class="text-xs text-schwab-lightText">Volatilidad: Alta</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white flex items-center space-x-2">
+                            <span>Tesla: "La Montaña Rusa"</span>
+                        </h3>
+                        <p class="text-sm text-schwab-lightText leading-relaxed">
+                            Inviertes <strong>$15 USD</strong> extra en Tesla a $400/acción. Semanas después, se reporta que el lanzamiento del Robotaxi se retrasará 6 meses. Tus $15 USD se desploman a <strong>$9 USD</strong> (pérdida del 40%). Esta vez no tienes dinero extra para comprar más. ¿Qué decides hacer?
+                        </p>
+                    </div>
+
+                    <!-- Botones de Acción -->
+                    <div class="space-y-3">
+                        <button onclick="selectOption('tesla', 'A')" class="w-full text-left p-3.5 rounded-xl bg-schwab-dark hover:bg-gray-800 border border-gray-800 hover:border-red-500 transition-all text-xs font-semibold flex justify-between items-center">
+                            <span>A) Vender por pánico a que la acción llegue a $0</span>
+                            <span class="w-5 h-5 rounded-full border border-gray-600 flex items-center justify-center text-[10px]">A</span>
+                        </button>
+                        <button onclick="selectOption('tesla', 'B')" class="w-full text-left p-3.5 rounded-xl bg-schwab-dark hover:bg-gray-800 border border-gray-800 hover:border-schwab-green transition-all text-xs font-semibold flex justify-between items-center">
+                            <span>B) Mantener tus $9 USD y apagar la app 6 a 12 meses</span>
+                            <span class="w-5 h-5 rounded-full border border-gray-600 flex items-center justify-center text-[10px]">B</span>
+                        </button>
+                    </div>
+
+                    <!-- Panel de Feedback -->
+                    <div id="feedback-tesla" class="hidden p-5 rounded-xl text-xs leading-relaxed transition-all duration-300">
+                        <!-- Se llena vía JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROPUESTA PARA PADRES -->
+        <section id="pitch-padres" class="scroll-mt-20">
+            <div class="bg-gradient-to-br from-schwab-card to-[#0d1e36] rounded-3xl border border-gray-800 p-8 md:p-12 relative overflow-hidden">
+                <div class="absolute -right-24 -bottom-24 w-96 h-96 bg-schwab-green/5 rounded-full blur-3xl"></div>
+                
+                <div class="max-w-3xl mx-auto space-y-8">
+                    <div class="text-center space-y-3">
+                        <span class="px-3 py-1 text-xs font-bold text-schwab-green bg-schwab-green/10 rounded-full border border-schwab-green/20 uppercase tracking-widest">
+                            Listo para la Acción
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Presentación del Plan para mis Padres</h2>
+                        <p class="text-sm text-schwab-lightText leading-relaxed">
+                            Toma este resumen estructurado con información detallada para presentárselo a tus padres y facilitar la apertura de la cuenta custodia en Schwab de manera formal y profesional.
+                        </p>
+                    </div>
+
+                    <!-- El Pitch Block -->
+                    <div id="pitch-text-block" class="bg-schwab-dark p-6 rounded-2xl border border-gray-800 space-y-6 relative">
+                        <!-- Marca de Agua -->
+                        <div class="absolute right-4 top-4 text-xs font-semibold px-2 py-1 bg-schwab-green/10 rounded border border-schwab-green/20 text-schwab-accent uppercase tracking-widest">
+                            Propuesta Oficial
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-lg font-bold text-white border-b border-gray-800 pb-2">📂 Tipo de Cuenta Solicitada</h3>
+                            <p class="text-xs text-schwab-lightText leading-relaxed">
+                                <strong class="text-white">Cuenta de Custodia (UGMA/UTMA)</strong> o <strong class="text-white">Schwab Starter Portfolio</strong>. Ambas permiten que un adulto administre el fondo legalmente mientras yo, con su supervisión, participo activamente en las decisiones de inversión como entrenamiento financiero práctico.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-lg font-bold text-white border-b border-gray-800 pb-2">💰 Presupuesto Inicial e Incrementos</h3>
+                            <p class="text-xs text-schwab-lightText leading-relaxed">
+                                • <strong class="text-white">Capital Inicial:</strong> $100 - $200 USD (fondos que he ahorrado o se me asignarán).<br>
+                                • <strong class="text-white">Aportaciones Recurrentes:</strong> Planes de ahorro de $10 - $20 USD mensuales para crear el hábito de inversión.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-lg font-bold text-white border-b border-gray-800 pb-2">🛡️ Estrategia de Mitigación de Riesgos</h3>
+                            <p class="text-xs text-schwab-lightText leading-relaxed">
+                                • <strong class="text-white">50% en SWPPX (Index Fund del S&P 500):</strong> Diversificación instantánea en 500 empresas sólidas. Si una sola empresa falla, las otras 499 protegen mis ahorros.<br>
+                                • <strong class="text-white">Schwab Stock Slices:</strong> Compra de fracciones de acciones estables (como Apple, Microsoft o Amazon) desde solo $5 USD para aprender sin arriesgar capital grande.<br>
+                                • <strong class="text-white">Cero Comisiones:</strong> Charles Schwab no cobra comisiones por compraventa de acciones en EE. UU., maximizando nuestro presupuesto inicial.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-lg font-bold text-white border-b border-gray-800 pb-2">⚖️ Compromiso Psicológico y Fiscal</h3>
+                            <p class="text-xs text-schwab-lightText leading-relaxed">
+                                • <strong class="text-white">No venta por pánico:</strong> No retiraré el dinero en bajas temporales. Entiendo el concepto de "pérdida en papel".<br>
+                                • <strong class="text-white">Seguimiento Semanal:</strong> Revisaré la cuenta una vez por semana junto con mis padres para analizar noticias y reportes de forma educativa.<br>
+                                • <strong class="text-white">Control Fiscal:</strong> El dinero se mantendrá bajo el límite impositivo anual (Kiddie Tax) para garantizar simplicidad en la declaración de impuestos de mis padres.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Botones -->
+                    <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                        <button onclick="copyPitchText()" class="w-full sm:w-auto px-6 py-3 bg-schwab-dark hover:bg-gray-800 text-white font-semibold rounded-xl border border-gray-700 hover:border-schwab-green flex items-center justify-center space-x-2 text-xs transition-all">
+                            <svg class="w-4 h-4 text-schwab-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
+                            </svg>
+                            <span id="copy-btn-text">Copiar Propuesta al Portapapeles</span>
+                        </button>
+                        <a href="https://www.schwab.com/custodial-account" target="_blank" class="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-schwab-green to-schwab-accent text-schwab-dark font-black rounded-xl text-center text-xs shadow-lg shadow-schwab-green/15 hover:opacity-90 transition-all">
+                            Ir a Charles Schwab (Abrir Cuenta)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 bg-schwab-dark/50 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <p class="text-xs text-schwab-lightText leading-relaxed">
+                Este sitio es un plan de inversión interactivo educativo para menores de edad, diseñado para el aprendizaje sobre la plataforma Charles Schwab bajo la supervisión de un adulto.
+            </p>
+            <p class="text-xs text-schwab-green font-semibold">
+                ¡La consistencia y el conocimiento son tus activos más valiosos!
+            </p>
+        </div>
+    </footer>
+
+    <!-- Lógica de Interactividad JS -->
+    <script>
+        // DOM Elements
+        const budgetInput = document.getElementById('budgetInput');
+        const budgetRange = document.getElementById('budgetRange');
+
+        const valAncla = document.getElementById('valAncla');
+        const valTecnologia = document.getElementById('valTecnologia');
+        const valConsumo = document.getElementById('valConsumo');
+
+        const barAncla = document.getElementById('barAncla');
+        const barTecnologia = document.getElementById('barTecnologia');
+        const barConsumo = document.getElementById('barConsumo');
+
+        // Sincronizar Input y Rango del Presupuesto
+        budgetInput.addEventListener('input', (e) => {
+            let val = parseFloat(e.target.value) || 0;
+            if (val > 1000) val = 1000;
+            budgetRange.value = val;
+            updateAllocation(val);
+        });
+
+        budgetRange.addEventListener('input', (e) => {
+            const val = parseFloat(e.target.value);
+            budgetInput.value = val;
+            updateAllocation(val);
+        });
+
+        // Función de Actualización de Valores
+        function updateAllocation(budget) {
+            const ancla = budget * 0.50;
+            const tech = budget * 0.33;
+            const consumo = budget * 0.17;
+
+            valAncla.innerText = `$${ancla.toFixed(2)}`;
+            valTecnologia.innerText = `$${tech.toFixed(2)}`;
+            valConsumo.innerText = `$${consumo.toFixed(2)}`;
+        }
+
+        // Selección de opciones de escenarios de aprendizaje
+        function selectOption(scenario, option) {
+            const feedbackApple = document.getElementById('feedback-apple');
+            const feedbackTesla = document.getElementById('feedback-tesla');
+
+            if (scenario === 'apple') {
+                feedbackApple.classList.remove('hidden', 'bg-red-950/40', 'bg-yellow-950/40', 'bg-emerald-950/40', 'border-red-900', 'border-yellow-900', 'border-emerald-900');
+                
+                if (option === 'A') {
+                    feedbackApple.classList.add('bg-red-950/40', 'border', 'border-red-900', 'text-red-200');
+                    feedbackApple.innerHTML = `
+                        <div class="flex items-start space-x-2">
+                            <span class="text-lg">❌</span>
+                            <div>
+                                <strong class="text-white block mb-1">Opción A: Vender de inmediato.</strong>
+                                Al vender a $21 USD, estás convirtiendo una pérdida temporal "en papel" en una pérdida de dinero real. Apple sigue siendo una empresa gigante y con miles de millones de dólares en reservas. Los inversores profesionales te comprarán esas acciones baratas para beneficiarse en el futuro.
+                            </div>
+                        </div>
+                    `;
+                } else if (option === 'B') {
+                    feedbackApple.classList.add('bg-yellow-950/40', 'border', 'border-yellow-900', 'text-yellow-200');
+                    feedbackApple.innerHTML = `
+                        <div class="flex items-start space-x-2">
+                            <span class="text-lg">⚠️</span>
+                            <div>
+                                <strong class="text-white block mb-1">Opción B: Esperar y vender si baja más.</strong>
+                                Es lógico querer observar el mercado, pero vender si baja a $18 USD es caer en la trampa de "vender en el suelo" (o en pérdidas). La fluctuación a la baja de un gigante de consumo masivo como Apple suele ser el mejor momento para mantener el capital y esperar su inevitable ciclo alcista.
+                            </div>
+                        </div>
+                    `;
+                } else if (option === 'C') {
+                    feedbackApple.classList.add('bg-emerald-950/40', 'border', 'border-emerald-900', 'text-emerald-200');
+                    feedbackApple.innerHTML = `
+                        <div class="flex items-start space-x-2">
+                            <span class="text-lg">✅</span>
+                            <div>
+                                <strong class="text-white block mb-1">Opción C: Comprar con descuento (Dollar-Cost Averaging).</strong>
+                                ¡Excelente decisión! Al comprar más a $21 USD estás adquiriendo la misma empresa premium con un descuento del 28% respecto a tu precio inicial. Esto promedia tu costo a la baja, logrando que te recuperes y ganes dinero mucho más rápido cuando el precio de Apple vuelva a subir.
+                            </div>
+                        </div>
+                    `;
+                }
+            } else if (scenario === 'tesla') {
+                feedbackTesla.classList.remove('hidden', 'bg-red-950/40', 'bg-emerald-950/40', 'border-red-900', 'border-emerald-900');
+
+                if (option === 'A') {
+                    feedbackTesla.classList.add('bg-red-950/40', 'border', 'border-red-900', 'text-red-200');
+                    feedbackTesla.innerHTML = `
+                        <div class="flex items-start space-x-2">
+                            <span class="text-lg">❌</span>
+                            <div>
+                                <strong class="text-white block mb-1">Opción A: Vender a $9 USD.</strong>
+                                Estás absorbiendo una pérdida masiva de casi el 40%. Empresas de alta volatilidad como Tesla reaccionan de manera exagerada a las noticias de corto plazo (como retrasos de Robotaxis). Vender por miedo detiene tu proceso de aprendizaje de forma dolorosa.
+                            </div>
+                        </div>
+                    `;
+                } else if (option === 'B') {
+                    feedbackTesla.classList.add('bg-emerald-950/40', 'border', 'border-emerald-900', 'text-emerald-200');
+                    feedbackTesla.innerHTML = `
+                        <div class="flex items-start space-x-2">
+                            <span class="text-lg">👑</span>
+                            <div>
+                                <strong class="text-white block mb-1">Opción B: Mantener con confianza (Mentalidad Profesional).</strong>
+                                ¡Brillante decisión! Demuestras una madurez financiera excelente. Sabes que Tesla ya ha pasado por esto antes (como con el Cybertruck). No vender significa que conservas exactamente el mismo número de fracciones de la empresa, dándole un plazo de 12 a 16 meses al mercado para recuperarse mientras te enfocas en tus estudios u otras actividades.
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+        }
+
+        // Función segura para copiar la propuesta para padres al portapapeles
+        function copyPitchText() {
+            const pitchTextBlock = document.getElementById('pitch-text-block');
+            const copyBtnText = document.getElementById('copy-btn-text');
+            
+            // Creamos un textarea temporal para poder usar el fallback del portapapeles
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = pitchTextBlock.innerText;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            
+            try {
+                document.execCommand('copy');
+                copyBtnText.innerText = "¡Copiado con éxito!";
+                copyBtnText.classList.add('text-schwab-green');
+                setTimeout(() => {
+                    copyBtnText.innerText = "Copiar Propuesta al Portapapeles";
+                    copyBtnText.classList.remove('text-schwab-green');
+                }, 3000);
+            } catch (err) {
+                console.error('Error al copiar: ', err);
+            }
+            
+            document.body.removeChild(tempTextArea);
+        }
+
+        // Inicializar
+        updateAllocation(150);
+    </script>
+</body>
+</html>
